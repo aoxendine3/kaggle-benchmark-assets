@@ -2,11 +2,11 @@
 
 [![Kaggle Benchmark](https://img.shields.io/badge/Kaggle-Benchmarking%20Challenge-blue.svg)](https://dev.to/challenges/kaggle-2026-09-23)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Verification: NASA V&V](https://img.shields.io/badge/NASA%20V%26V-IEEE%201012%20SAT-brightgreen.svg)](https://github.com/aoxendine3/SSOT_Agentic_Brain/blob/main/docs/audits/XORAS_014_KAGGLE_BENCHMARK_VERIFICATION.md)
+[![Verification: NASA V&V](https://img.shields.io/badge/NASA%20V%26V-IEEE%201012%20SAT-brightgreen.svg)](docs/audits/XORAS_014_KAGGLE_BENCHMARK_VERIFICATION.md)
 [![Hardware: Apple Silicon M4](https://img.shields.io/badge/Hardware-Apple%20M4%20Max-black.svg)]()
 [![Throughput: 3.16M ops/sec](https://img.shields.io/badge/POSIX%20SHM-3.16M%20ops%2Fsec-neon.svg)]()
 
-Official high-resolution public asset repository for the **Kaggle Multi-Turn Agentic Context Decay & State Pollution Benchmark (2026)** submission.
+Official high-resolution public asset repository, evaluation harness, and NASA V&V audit package for the **Kaggle Multi-Turn Agentic Context Decay & State Pollution Benchmark (2026)** submission.
 
 ---
 
@@ -47,9 +47,9 @@ Official high-resolution public asset repository for the **Kaggle Multi-Turn Age
 To reproduce this benchmark locally on macOS / Apple Silicon:
 
 ```bash
-# Clone the core repository
-git clone https://github.com/aoxendine3/SSOT_Agentic_Brain.git
-cd SSOT_Agentic_Brain
+# Clone this asset & benchmark repository
+git clone https://github.com/aoxendine3/kaggle-benchmark-assets.git
+cd kaggle-benchmark-assets
 
 # Execute the Kaggle Benchmark Harness
 python3 ops/benchmarks/kaggle_agentic_context_benchmark.py
@@ -59,9 +59,10 @@ python3 ops/benchmarks/kaggle_agentic_context_benchmark.py
 
 ## 📜 Verification & Audit Lineage
 
-- **Core Repository:** [SSOT_Agentic_Brain](https://github.com/aoxendine3/SSOT_Agentic_Brain)
-- **NASA V&V Technical Memorandum:** [XORAS-014 Audit Document](https://github.com/aoxendine3/SSOT_Agentic_Brain/blob/main/docs/audits/XORAS_014_KAGGLE_BENCHMARK_VERIFICATION.md)
-- **Official DEV.to Article Draft:** [DEV Kaggle Benchmark Submission](https://github.com/aoxendine3/SSOT_Agentic_Brain/blob/main/docs/plans/DEV_KAGGLE_BENCHMARK_POST_READY.md)
+- **NASA V&V Technical Memorandum:** [XORAS-014 Audit Document](docs/audits/XORAS_014_KAGGLE_BENCHMARK_VERIFICATION.md)
+- **Official DEV.to Article Draft:** [DEV Kaggle Benchmark Submission](docs/plans/DEV_KAGGLE_BENCHMARK_POST_READY.md)
+- **Benchmark Evaluation Harness:** [Kaggle Benchmark Evaluator](ops/benchmarks/kaggle_agentic_context_benchmark.py)
+- **Raw Empirical Telemetry Data:** [Kaggle Benchmark Results JSON](memory/catch_log/kaggle_benchmark_results.json)
 
 ---
 
