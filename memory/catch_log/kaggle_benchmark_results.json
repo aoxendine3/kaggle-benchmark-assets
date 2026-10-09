@@ -1,11 +1,11 @@
 {
   "benchmark_name": "Empirical LLM Multi-Turn Context Decay & State Pollution Benchmark",
-  "timestamp": "2026-10-09T16:40:53Z",
+  "timestamp": "2026-10-09T16:57:44Z",
   "hardware_environment": "Apple Silicon M4 Unified Memory (macOS 15)",
-  "execution_backend": "Ollama Local LLM Inference API",
+  "execution_backend": "Ollama Local LLM Inference API (llama3.2:3b)",
   "dataset": "Multi-Turn State Parameter Retention Task (20 Sequential Turns)",
   "evaluations": {
-    "llama3.2:3b (Raw Context)": [
+    "Llama-3.2-3B (Raw Context Window)": [
       {
         "step": 1,
         "target_key": "ENV_VAR_KEY_01",
@@ -13,7 +13,7 @@
         "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 612.26
+        "latency_ms": 4180.94
       },
       {
         "step": 2,
@@ -22,7 +22,7 @@
         "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 287.07
+        "latency_ms": 293.24
       },
       {
         "step": 3,
@@ -31,7 +31,7 @@
         "model_response": "TOKEN_0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 330.43
+        "latency_ms": 336.48
       },
       {
         "step": 4,
@@ -40,7 +40,7 @@
         "model_response": "TOKEN_0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 329.17
+        "latency_ms": 333.58
       },
       {
         "step": 5,
@@ -49,7 +49,7 @@
         "model_response": "TOKEN_0xF4D2",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 393.16
+        "latency_ms": 336.2
       },
       {
         "step": 6,
@@ -58,16 +58,16 @@
         "model_response": "TOKEN_0x6F3C",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 350.95
+        "latency_ms": 360.4
       },
       {
         "step": 7,
         "target_key": "ENV_VAR_KEY_04",
         "expected_token": "TOKEN_0xE9A5",
-        "model_response": "TOKEN_0xE9A5",
+        "model_response": "ENV_VAR_KEY_04 = 'TOKEN_0xE9A5'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 328.42
+        "latency_ms": 527.41
       },
       {
         "step": 8,
@@ -76,7 +76,7 @@
         "model_response": "TOKEN_0x640F",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 307.81
+        "latency_ms": 319.74
       },
       {
         "step": 9,
@@ -85,7 +85,7 @@
         "model_response": "ENV_VAR_KEY_06 = 'TOKEN_0xDE78'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 467.67
+        "latency_ms": 520.4
       },
       {
         "step": 10,
@@ -94,7 +94,7 @@
         "model_response": "ENV_VAR_KEY_07 = 'TOKEN_0x58E2'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 511.92
+        "latency_ms": 536.37
       },
       {
         "step": 11,
@@ -103,7 +103,7 @@
         "model_response": "ENV_VAR_KEY_08 = 'TOKEN_0xD34B'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 491.65
+        "latency_ms": 507.23
       },
       {
         "step": 12,
@@ -112,7 +112,7 @@
         "model_response": "0x4DB5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 290.21
+        "latency_ms": 287.69
       },
       {
         "step": 13,
@@ -121,7 +121,7 @@
         "model_response": "0xC81E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 263.68
+        "latency_ms": 270.46
       },
       {
         "step": 14,
@@ -130,7 +130,7 @@
         "model_response": "0x4288",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 269.85
+        "latency_ms": 285.6
       },
       {
         "step": 15,
@@ -139,7 +139,7 @@
         "model_response": "0xBCF1",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 270.04
+        "latency_ms": 271.65
       },
       {
         "step": 16,
@@ -148,7 +148,7 @@
         "model_response": "0x375B",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 273.12
+        "latency_ms": 297.12
       },
       {
         "step": 17,
@@ -157,7 +157,7 @@
         "model_response": "TOKEN_0xB1C4",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 339.63
+        "latency_ms": 354.57
       },
       {
         "step": 18,
@@ -166,7 +166,7 @@
         "model_response": "0x2C2E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 313.77
+        "latency_ms": 324.48
       },
       {
         "step": 19,
@@ -175,7 +175,7 @@
         "model_response": "0xA697",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 243.81
+        "latency_ms": 250.42
       },
       {
         "step": 20,
@@ -184,18 +184,18 @@
         "model_response": "0x2101",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 271.62
+        "latency_ms": 267.41
       }
     ],
-    "llama3.2:3b + Memory Index": [
+    "Llama-3.2-3B (Sliding 5-Turn Window)": [
       {
         "step": 1,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "0x7A69",
+        "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 233.05
+        "latency_ms": 503.68
       },
       {
         "step": 2,
@@ -204,34 +204,34 @@
         "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 145.59
+        "latency_ms": 285.4
       },
       {
         "step": 3,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "0x7A69",
+        "model_response": "TOKEN_0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 140.02
+        "latency_ms": 338.24
       },
       {
         "step": 4,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "0x7A69",
+        "model_response": "TOKEN_0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 140.24
+        "latency_ms": 333.52
       },
       {
         "step": 5,
         "target_key": "ENV_VAR_KEY_02",
         "expected_token": "TOKEN_0xF4D2",
-        "model_response": "0xF4D2",
+        "model_response": "TOKEN_0xF4D2",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 206.8
+        "latency_ms": 337.57
       },
       {
         "step": 6,
@@ -240,16 +240,16 @@
         "model_response": "TOKEN_0x6F3C",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 279.02
+        "latency_ms": 592.94
       },
       {
         "step": 7,
         "target_key": "ENV_VAR_KEY_04",
         "expected_token": "TOKEN_0xE9A5",
-        "model_response": "0xE9A5",
+        "model_response": "TOKEN_0xE9A5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 214.09
+        "latency_ms": 590.36
       },
       {
         "step": 8,
@@ -258,16 +258,16 @@
         "model_response": "TOKEN_0x640F",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 230.14
+        "latency_ms": 547.7
       },
       {
         "step": 9,
         "target_key": "ENV_VAR_KEY_06",
         "expected_token": "TOKEN_0xDE78",
-        "model_response": "0xDE78",
+        "model_response": "TOKEN_0xDE78",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 161.39
+        "latency_ms": 533.27
       },
       {
         "step": 10,
@@ -276,7 +276,7 @@
         "model_response": "TOKEN_0x58E2",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 254.45
+        "latency_ms": 595.05
       },
       {
         "step": 11,
@@ -285,7 +285,7 @@
         "model_response": "TOKEN_0xD34B",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 247.08
+        "latency_ms": 567.29
       },
       {
         "step": 12,
@@ -294,7 +294,7 @@
         "model_response": "TOKEN_0x4DB5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 251.7
+        "latency_ms": 651.57
       },
       {
         "step": 13,
@@ -303,7 +303,7 @@
         "model_response": "TOKEN_0xC81E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 229.13
+        "latency_ms": 590.6
       },
       {
         "step": 14,
@@ -312,7 +312,7 @@
         "model_response": "TOKEN_0x4288",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 238.25
+        "latency_ms": 564.5
       },
       {
         "step": 15,
@@ -321,7 +321,7 @@
         "model_response": "TOKEN_0xBCF1",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 306.79
+        "latency_ms": 571.83
       },
       {
         "step": 16,
@@ -330,7 +330,7 @@
         "model_response": "TOKEN_0x375B",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 265.27
+        "latency_ms": 567.5
       },
       {
         "step": 17,
@@ -339,7 +339,7 @@
         "model_response": "TOKEN_0xB1C4",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 255.02
+        "latency_ms": 586.47
       },
       {
         "step": 18,
@@ -348,7 +348,189 @@
         "model_response": "TOKEN_0x2C2E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 275.73
+        "latency_ms": 611.77
+      },
+      {
+        "step": 19,
+        "target_key": "ENV_VAR_KEY_16",
+        "expected_token": "TOKEN_0xA697",
+        "model_response": "TOKEN_0xA697",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 558.24
+      },
+      {
+        "step": 20,
+        "target_key": "ENV_VAR_KEY_17",
+        "expected_token": "TOKEN_0x2101",
+        "model_response": "0x2101",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 536.83
+      }
+    ],
+    "Llama-3.2-3B (Indexed Key Retrieval)": [
+      {
+        "step": 1,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 303.59
+      },
+      {
+        "step": 2,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 152.59
+      },
+      {
+        "step": 3,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 149.81
+      },
+      {
+        "step": 4,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 154.23
+      },
+      {
+        "step": 5,
+        "target_key": "ENV_VAR_KEY_02",
+        "expected_token": "TOKEN_0xF4D2",
+        "model_response": "0xF4D2",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 300.79
+      },
+      {
+        "step": 6,
+        "target_key": "ENV_VAR_KEY_03",
+        "expected_token": "TOKEN_0x6F3C",
+        "model_response": "TOKEN_0x6F3C",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 375.92
+      },
+      {
+        "step": 7,
+        "target_key": "ENV_VAR_KEY_04",
+        "expected_token": "TOKEN_0xE9A5",
+        "model_response": "0xE9A5",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 310.34
+      },
+      {
+        "step": 8,
+        "target_key": "ENV_VAR_KEY_05",
+        "expected_token": "TOKEN_0x640F",
+        "model_response": "TOKEN_0x640F",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 366.76
+      },
+      {
+        "step": 9,
+        "target_key": "ENV_VAR_KEY_06",
+        "expected_token": "TOKEN_0xDE78",
+        "model_response": "0xDE78",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 244.46
+      },
+      {
+        "step": 10,
+        "target_key": "ENV_VAR_KEY_07",
+        "expected_token": "TOKEN_0x58E2",
+        "model_response": "TOKEN_0x58E2",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 354.8
+      },
+      {
+        "step": 11,
+        "target_key": "ENV_VAR_KEY_08",
+        "expected_token": "TOKEN_0xD34B",
+        "model_response": "TOKEN_0xD34B",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 325.28
+      },
+      {
+        "step": 12,
+        "target_key": "ENV_VAR_KEY_09",
+        "expected_token": "TOKEN_0x4DB5",
+        "model_response": "TOKEN_0x4DB5",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 349.45
+      },
+      {
+        "step": 13,
+        "target_key": "ENV_VAR_KEY_10",
+        "expected_token": "TOKEN_0xC81E",
+        "model_response": "TOKEN_0xC81E",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 336.46
+      },
+      {
+        "step": 14,
+        "target_key": "ENV_VAR_KEY_11",
+        "expected_token": "TOKEN_0x4288",
+        "model_response": "TOKEN_0x4288",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 328.29
+      },
+      {
+        "step": 15,
+        "target_key": "ENV_VAR_KEY_12",
+        "expected_token": "TOKEN_0xBCF1",
+        "model_response": "TOKEN_0xBCF1",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 322.85
+      },
+      {
+        "step": 16,
+        "target_key": "ENV_VAR_KEY_13",
+        "expected_token": "TOKEN_0x375B",
+        "model_response": "TOKEN_0x375B",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 323.73
+      },
+      {
+        "step": 17,
+        "target_key": "ENV_VAR_KEY_14",
+        "expected_token": "TOKEN_0xB1C4",
+        "model_response": "TOKEN_0xB1C4",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 352.56
+      },
+      {
+        "step": 18,
+        "target_key": "ENV_VAR_KEY_15",
+        "expected_token": "TOKEN_0x2C2E",
+        "model_response": "TOKEN_0x2C2E",
+        "accuracy_recall": 100.0,
+        "state_pollution_pct": 0.0,
+        "latency_ms": 372.61
       },
       {
         "step": 19,
@@ -357,7 +539,7 @@
         "model_response": "0xA697",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 171.7
+        "latency_ms": 264.62
       },
       {
         "step": 20,
@@ -366,371 +548,189 @@
         "model_response": "TOKEN_0x2101",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 234.87
+        "latency_ms": 329.89
       }
     ],
-    "qwen2.5-coder:7b (Raw Context)": [
+    "Llama-3.2-3B (Poincar\u00e9 Partition Routing)": [
       {
         "step": 1,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 3.86
+        "latency_ms": 578.66
       },
       {
         "step": 2,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.64
+        "latency_ms": 430.4
       },
       {
         "step": 3,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.71
+        "latency_ms": 444.55
       },
       {
         "step": 4,
         "target_key": "ENV_VAR_KEY_01",
         "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.42
+        "latency_ms": 439.37
       },
       {
         "step": 5,
         "target_key": "ENV_VAR_KEY_02",
         "expected_token": "TOKEN_0xF4D2",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_02 is 0xF4D2.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.46
+        "latency_ms": 621.96
       },
       {
         "step": 6,
         "target_key": "ENV_VAR_KEY_03",
         "expected_token": "TOKEN_0x6F3C",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_03 is 0x6F3C.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.33
+        "latency_ms": 604.59
       },
       {
         "step": 7,
         "target_key": "ENV_VAR_KEY_04",
         "expected_token": "TOKEN_0xE9A5",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_04 is 0xE9A5.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.33
+        "latency_ms": 579.25
       },
       {
         "step": 8,
         "target_key": "ENV_VAR_KEY_05",
         "expected_token": "TOKEN_0x640F",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_05 is 0x640F.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.14
+        "latency_ms": 591.0
       },
       {
         "step": 9,
         "target_key": "ENV_VAR_KEY_06",
         "expected_token": "TOKEN_0xDE78",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_06 is:\n\n0xDE78",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.27
+        "latency_ms": 503.26
       },
       {
         "step": 10,
         "target_key": "ENV_VAR_KEY_07",
         "expected_token": "TOKEN_0x58E2",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_07 is 0x58E2.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.57
+        "latency_ms": 585.57
       },
       {
         "step": 11,
         "target_key": "ENV_VAR_KEY_08",
         "expected_token": "TOKEN_0xD34B",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_08 is 0xD34B.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.42
+        "latency_ms": 567.75
       },
       {
         "step": 12,
         "target_key": "ENV_VAR_KEY_09",
         "expected_token": "TOKEN_0x4DB5",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_09 is 0x4DB5.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.61
+        "latency_ms": 573.84
       },
       {
         "step": 13,
         "target_key": "ENV_VAR_KEY_10",
         "expected_token": "TOKEN_0xC81E",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_10 is 0xC81E.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.41
+        "latency_ms": 576.35
       },
       {
         "step": 14,
         "target_key": "ENV_VAR_KEY_11",
         "expected_token": "TOKEN_0x4288",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_11 is 0x4288.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.37
+        "latency_ms": 578.89
       },
       {
         "step": 15,
         "target_key": "ENV_VAR_KEY_12",
         "expected_token": "TOKEN_0xBCF1",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_12 is 0xBCF1.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.51
+        "latency_ms": 572.88
       },
       {
         "step": 16,
         "target_key": "ENV_VAR_KEY_13",
         "expected_token": "TOKEN_0x375B",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_13 is 0x375B.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.29
+        "latency_ms": 572.65
       },
       {
         "step": 17,
         "target_key": "ENV_VAR_KEY_14",
         "expected_token": "TOKEN_0xB1C4",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_14 is 0xB1C4.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.21
+        "latency_ms": 588.38
       },
       {
         "step": 18,
         "target_key": "ENV_VAR_KEY_15",
         "expected_token": "TOKEN_0x2C2E",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_15 is 0x2C2E.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.16
+        "latency_ms": 622.33
       },
       {
         "step": 19,
         "target_key": "ENV_VAR_KEY_16",
         "expected_token": "TOKEN_0xA697",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_16 is 0xA697.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.23
+        "latency_ms": 551.45
       },
       {
         "step": 20,
         "target_key": "ENV_VAR_KEY_17",
         "expected_token": "TOKEN_0x2101",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
+        "model_response": "The token set for ENV_VAR_KEY_17 is 0x2101.",
+        "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 1.36
-      }
-    ],
-    "qwen2.5-coder:7b + Memory Index": [
-      {
-        "step": 1,
-        "target_key": "ENV_VAR_KEY_01",
-        "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.24
-      },
-      {
-        "step": 2,
-        "target_key": "ENV_VAR_KEY_01",
-        "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.06
-      },
-      {
-        "step": 3,
-        "target_key": "ENV_VAR_KEY_01",
-        "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.25
-      },
-      {
-        "step": 4,
-        "target_key": "ENV_VAR_KEY_01",
-        "expected_token": "TOKEN_0x7A69",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.24
-      },
-      {
-        "step": 5,
-        "target_key": "ENV_VAR_KEY_02",
-        "expected_token": "TOKEN_0xF4D2",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.22
-      },
-      {
-        "step": 6,
-        "target_key": "ENV_VAR_KEY_03",
-        "expected_token": "TOKEN_0x6F3C",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.26
-      },
-      {
-        "step": 7,
-        "target_key": "ENV_VAR_KEY_04",
-        "expected_token": "TOKEN_0xE9A5",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.35
-      },
-      {
-        "step": 8,
-        "target_key": "ENV_VAR_KEY_05",
-        "expected_token": "TOKEN_0x640F",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.43
-      },
-      {
-        "step": 9,
-        "target_key": "ENV_VAR_KEY_06",
-        "expected_token": "TOKEN_0xDE78",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.2
-      },
-      {
-        "step": 10,
-        "target_key": "ENV_VAR_KEY_07",
-        "expected_token": "TOKEN_0x58E2",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.27
-      },
-      {
-        "step": 11,
-        "target_key": "ENV_VAR_KEY_08",
-        "expected_token": "TOKEN_0xD34B",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.39
-      },
-      {
-        "step": 12,
-        "target_key": "ENV_VAR_KEY_09",
-        "expected_token": "TOKEN_0x4DB5",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.37
-      },
-      {
-        "step": 13,
-        "target_key": "ENV_VAR_KEY_10",
-        "expected_token": "TOKEN_0xC81E",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.34
-      },
-      {
-        "step": 14,
-        "target_key": "ENV_VAR_KEY_11",
-        "expected_token": "TOKEN_0x4288",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.16
-      },
-      {
-        "step": 15,
-        "target_key": "ENV_VAR_KEY_12",
-        "expected_token": "TOKEN_0xBCF1",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 2.09
-      },
-      {
-        "step": 16,
-        "target_key": "ENV_VAR_KEY_13",
-        "expected_token": "TOKEN_0x375B",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.26
-      },
-      {
-        "step": 17,
-        "target_key": "ENV_VAR_KEY_14",
-        "expected_token": "TOKEN_0xB1C4",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.2
-      },
-      {
-        "step": 18,
-        "target_key": "ENV_VAR_KEY_15",
-        "expected_token": "TOKEN_0x2C2E",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.57
-      },
-      {
-        "step": 19,
-        "target_key": "ENV_VAR_KEY_16",
-        "expected_token": "TOKEN_0xA697",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.37
-      },
-      {
-        "step": 20,
-        "target_key": "ENV_VAR_KEY_17",
-        "expected_token": "TOKEN_0x2101",
-        "model_response": "ERROR: HTTP Error 404: Not Found",
-        "accuracy_recall": 0.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 1.37
+        "latency_ms": 575.15
       }
     ]
   }
