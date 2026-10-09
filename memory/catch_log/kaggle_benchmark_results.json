@@ -1,1214 +1,736 @@
 {
-  "benchmark_name": "Multi-Turn Agentic Memory Retrieval & Latency Microbenchmark",
-  "timestamp": "2026-10-09T16:36:46Z",
-  "methodology": "Empirical memory indexing microbenchmark measuring vector search, sliding window eviction, and tree partition retrieval latency using numpy 2.4.6.",
+  "benchmark_name": "Empirical LLM Multi-Turn Context Decay & State Pollution Benchmark",
+  "timestamp": "2026-10-09T16:40:53Z",
+  "hardware_environment": "Apple Silicon M4 Unified Memory (macOS 15)",
+  "execution_backend": "Ollama Local LLM Inference API",
+  "dataset": "Multi-Turn State Parameter Retention Task (20 Sequential Turns)",
   "evaluations": {
-    "18,432-D Hyperbolic Poincar\u00e9 Memory": [
+    "llama3.2:3b (Raw Context)": [
       {
         "step": 1,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "The token set for ENV_VAR_KEY_01 is 0x7A69.",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.011
+        "latency_ms": 612.26
       },
       {
         "step": 2,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0043
+        "latency_ms": 287.07
       },
       {
         "step": 3,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "TOKEN_0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0037
+        "latency_ms": 330.43
       },
       {
         "step": 4,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "TOKEN_0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0037
+        "latency_ms": 329.17
       },
       {
         "step": 5,
+        "target_key": "ENV_VAR_KEY_02",
+        "expected_token": "TOKEN_0xF4D2",
+        "model_response": "TOKEN_0xF4D2",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0039
+        "latency_ms": 393.16
       },
       {
         "step": 6,
+        "target_key": "ENV_VAR_KEY_03",
+        "expected_token": "TOKEN_0x6F3C",
+        "model_response": "TOKEN_0x6F3C",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0058
+        "latency_ms": 350.95
       },
       {
         "step": 7,
+        "target_key": "ENV_VAR_KEY_04",
+        "expected_token": "TOKEN_0xE9A5",
+        "model_response": "TOKEN_0xE9A5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0041
+        "latency_ms": 328.42
       },
       {
         "step": 8,
+        "target_key": "ENV_VAR_KEY_05",
+        "expected_token": "TOKEN_0x640F",
+        "model_response": "TOKEN_0x640F",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0044
+        "latency_ms": 307.81
       },
       {
         "step": 9,
+        "target_key": "ENV_VAR_KEY_06",
+        "expected_token": "TOKEN_0xDE78",
+        "model_response": "ENV_VAR_KEY_06 = 'TOKEN_0xDE78'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0071
+        "latency_ms": 467.67
       },
       {
         "step": 10,
+        "target_key": "ENV_VAR_KEY_07",
+        "expected_token": "TOKEN_0x58E2",
+        "model_response": "ENV_VAR_KEY_07 = 'TOKEN_0x58E2'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0069
+        "latency_ms": 511.92
       },
       {
         "step": 11,
+        "target_key": "ENV_VAR_KEY_08",
+        "expected_token": "TOKEN_0xD34B",
+        "model_response": "ENV_VAR_KEY_08 = 'TOKEN_0xD34B'",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0072
+        "latency_ms": 491.65
       },
       {
         "step": 12,
+        "target_key": "ENV_VAR_KEY_09",
+        "expected_token": "TOKEN_0x4DB5",
+        "model_response": "0x4DB5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0065
+        "latency_ms": 290.21
       },
       {
         "step": 13,
+        "target_key": "ENV_VAR_KEY_10",
+        "expected_token": "TOKEN_0xC81E",
+        "model_response": "0xC81E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0068
+        "latency_ms": 263.68
       },
       {
         "step": 14,
+        "target_key": "ENV_VAR_KEY_11",
+        "expected_token": "TOKEN_0x4288",
+        "model_response": "0x4288",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0095
+        "latency_ms": 269.85
       },
       {
         "step": 15,
+        "target_key": "ENV_VAR_KEY_12",
+        "expected_token": "TOKEN_0xBCF1",
+        "model_response": "0xBCF1",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0076
+        "latency_ms": 270.04
       },
       {
         "step": 16,
+        "target_key": "ENV_VAR_KEY_13",
+        "expected_token": "TOKEN_0x375B",
+        "model_response": "0x375B",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0079
+        "latency_ms": 273.12
       },
       {
         "step": 17,
+        "target_key": "ENV_VAR_KEY_14",
+        "expected_token": "TOKEN_0xB1C4",
+        "model_response": "TOKEN_0xB1C4",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0082
+        "latency_ms": 339.63
       },
       {
         "step": 18,
+        "target_key": "ENV_VAR_KEY_15",
+        "expected_token": "TOKEN_0x2C2E",
+        "model_response": "0x2C2E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0087
+        "latency_ms": 313.77
       },
       {
         "step": 19,
+        "target_key": "ENV_VAR_KEY_16",
+        "expected_token": "TOKEN_0xA697",
+        "model_response": "0xA697",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.009
+        "latency_ms": 243.81
       },
       {
         "step": 20,
+        "target_key": "ENV_VAR_KEY_17",
+        "expected_token": "TOKEN_0x2101",
+        "model_response": "0x2101",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0077
-      },
-      {
-        "step": 21,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0081
-      },
-      {
-        "step": 22,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0105
-      },
-      {
-        "step": 23,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0091
-      },
-      {
-        "step": 24,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0092
-      },
-      {
-        "step": 25,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0097
-      },
-      {
-        "step": 26,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0098
-      },
-      {
-        "step": 27,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.01
-      },
-      {
-        "step": 28,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0104
-      },
-      {
-        "step": 29,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0109
-      },
-      {
-        "step": 30,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0131
-      },
-      {
-        "step": 31,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.012
-      },
-      {
-        "step": 32,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.012
-      },
-      {
-        "step": 33,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0126
-      },
-      {
-        "step": 34,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0127
-      },
-      {
-        "step": 35,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.013
-      },
-      {
-        "step": 36,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0105
-      },
-      {
-        "step": 37,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.011
-      },
-      {
-        "step": 38,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0127
-      },
-      {
-        "step": 39,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.012
-      },
-      {
-        "step": 40,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0122
-      },
-      {
-        "step": 41,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0127
-      },
-      {
-        "step": 42,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.013
-      },
-      {
-        "step": 43,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0132
-      },
-      {
-        "step": 44,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0135
-      },
-      {
-        "step": 45,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0141
-      },
-      {
-        "step": 46,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0154
-      },
-      {
-        "step": 47,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.015
-      },
-      {
-        "step": 48,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0152
-      },
-      {
-        "step": 49,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0152
-      },
-      {
-        "step": 50,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0156
+        "latency_ms": 271.62
       }
     ],
-    "Vector Cosine RAG Index": [
+    "llama3.2:3b + Memory Index": [
       {
         "step": 1,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0241
+        "latency_ms": 233.05
       },
       {
         "step": 2,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0114
+        "latency_ms": 145.59
       },
       {
         "step": 3,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0073
+        "latency_ms": 140.02
       },
       {
         "step": 4,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "0x7A69",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0077
+        "latency_ms": 140.24
       },
       {
         "step": 5,
+        "target_key": "ENV_VAR_KEY_02",
+        "expected_token": "TOKEN_0xF4D2",
+        "model_response": "0xF4D2",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0067
+        "latency_ms": 206.8
       },
       {
         "step": 6,
+        "target_key": "ENV_VAR_KEY_03",
+        "expected_token": "TOKEN_0x6F3C",
+        "model_response": "TOKEN_0x6F3C",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0094
+        "latency_ms": 279.02
       },
       {
         "step": 7,
+        "target_key": "ENV_VAR_KEY_04",
+        "expected_token": "TOKEN_0xE9A5",
+        "model_response": "0xE9A5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0078
+        "latency_ms": 214.09
       },
       {
         "step": 8,
+        "target_key": "ENV_VAR_KEY_05",
+        "expected_token": "TOKEN_0x640F",
+        "model_response": "TOKEN_0x640F",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.7168
+        "latency_ms": 230.14
       },
       {
         "step": 9,
+        "target_key": "ENV_VAR_KEY_06",
+        "expected_token": "TOKEN_0xDE78",
+        "model_response": "0xDE78",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0163
+        "latency_ms": 161.39
       },
       {
         "step": 10,
+        "target_key": "ENV_VAR_KEY_07",
+        "expected_token": "TOKEN_0x58E2",
+        "model_response": "TOKEN_0x58E2",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0088
+        "latency_ms": 254.45
       },
       {
         "step": 11,
+        "target_key": "ENV_VAR_KEY_08",
+        "expected_token": "TOKEN_0xD34B",
+        "model_response": "TOKEN_0xD34B",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.01
+        "latency_ms": 247.08
       },
       {
         "step": 12,
+        "target_key": "ENV_VAR_KEY_09",
+        "expected_token": "TOKEN_0x4DB5",
+        "model_response": "TOKEN_0x4DB5",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0085
+        "latency_ms": 251.7
       },
       {
         "step": 13,
+        "target_key": "ENV_VAR_KEY_10",
+        "expected_token": "TOKEN_0xC81E",
+        "model_response": "TOKEN_0xC81E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0115
+        "latency_ms": 229.13
       },
       {
         "step": 14,
+        "target_key": "ENV_VAR_KEY_11",
+        "expected_token": "TOKEN_0x4288",
+        "model_response": "TOKEN_0x4288",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0085
+        "latency_ms": 238.25
       },
       {
         "step": 15,
+        "target_key": "ENV_VAR_KEY_12",
+        "expected_token": "TOKEN_0xBCF1",
+        "model_response": "TOKEN_0xBCF1",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.011
+        "latency_ms": 306.79
       },
       {
         "step": 16,
+        "target_key": "ENV_VAR_KEY_13",
+        "expected_token": "TOKEN_0x375B",
+        "model_response": "TOKEN_0x375B",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0103
+        "latency_ms": 265.27
       },
       {
         "step": 17,
+        "target_key": "ENV_VAR_KEY_14",
+        "expected_token": "TOKEN_0xB1C4",
+        "model_response": "TOKEN_0xB1C4",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0123
+        "latency_ms": 255.02
       },
       {
         "step": 18,
+        "target_key": "ENV_VAR_KEY_15",
+        "expected_token": "TOKEN_0x2C2E",
+        "model_response": "TOKEN_0x2C2E",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0095
+        "latency_ms": 275.73
       },
       {
         "step": 19,
+        "target_key": "ENV_VAR_KEY_16",
+        "expected_token": "TOKEN_0xA697",
+        "model_response": "0xA697",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0097
+        "latency_ms": 171.7
       },
       {
         "step": 20,
+        "target_key": "ENV_VAR_KEY_17",
+        "expected_token": "TOKEN_0x2101",
+        "model_response": "TOKEN_0x2101",
         "accuracy_recall": 100.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0127
-      },
-      {
-        "step": 21,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0127
-      },
-      {
-        "step": 22,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0123
-      },
-      {
-        "step": 23,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0107
-      },
-      {
-        "step": 24,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.011
-      },
-      {
-        "step": 25,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.015
-      },
-      {
-        "step": 26,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0111
-      },
-      {
-        "step": 27,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0118
-      },
-      {
-        "step": 28,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0118
-      },
-      {
-        "step": 29,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0138
-      },
-      {
-        "step": 30,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.012
-      },
-      {
-        "step": 31,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0122
-      },
-      {
-        "step": 32,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0137
-      },
-      {
-        "step": 33,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0137
-      },
-      {
-        "step": 34,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0132
-      },
-      {
-        "step": 35,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0135
-      },
-      {
-        "step": 36,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0141
-      },
-      {
-        "step": 37,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0142
-      },
-      {
-        "step": 38,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0136
-      },
-      {
-        "step": 39,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0143
-      },
-      {
-        "step": 40,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0145
-      },
-      {
-        "step": 41,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0188
-      },
-      {
-        "step": 42,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0169
-      },
-      {
-        "step": 43,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0155
-      },
-      {
-        "step": 44,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0155
-      },
-      {
-        "step": 45,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0176
-      },
-      {
-        "step": 46,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.016
-      },
-      {
-        "step": 47,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.017
-      },
-      {
-        "step": 48,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0172
-      },
-      {
-        "step": 49,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0184
-      },
-      {
-        "step": 50,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0173
+        "latency_ms": 234.87
       }
     ],
-    "Bounded Sliding Window KV-Cache": [
+    "qwen2.5-coder:7b (Raw Context)": [
       {
         "step": 1,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0011
+        "latency_ms": 3.86
       },
       {
         "step": 2,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0006
+        "latency_ms": 1.64
       },
       {
         "step": 3,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0005
+        "latency_ms": 1.71
       },
       {
         "step": 4,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.42
       },
       {
         "step": 5,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_02",
+        "expected_token": "TOKEN_0xF4D2",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.46
       },
       {
         "step": 6,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_03",
+        "expected_token": "TOKEN_0x6F3C",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.33
       },
       {
         "step": 7,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_04",
+        "expected_token": "TOKEN_0xE9A5",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
+        "latency_ms": 1.33
       },
       {
         "step": 8,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_05",
+        "expected_token": "TOKEN_0x640F",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.001
+        "latency_ms": 1.14
       },
       {
         "step": 9,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_06",
+        "expected_token": "TOKEN_0xDE78",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0006
+        "latency_ms": 1.27
       },
       {
         "step": 10,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_07",
+        "expected_token": "TOKEN_0x58E2",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.57
       },
       {
         "step": 11,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_08",
+        "expected_token": "TOKEN_0xD34B",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0004
+        "latency_ms": 1.42
       },
       {
         "step": 12,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_09",
+        "expected_token": "TOKEN_0x4DB5",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.61
       },
       {
         "step": 13,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_10",
+        "expected_token": "TOKEN_0xC81E",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.41
       },
       {
         "step": 14,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_11",
+        "expected_token": "TOKEN_0x4288",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.37
       },
       {
         "step": 15,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_12",
+        "expected_token": "TOKEN_0xBCF1",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.51
       },
       {
         "step": 16,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_13",
+        "expected_token": "TOKEN_0x375B",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.29
       },
       {
         "step": 17,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_14",
+        "expected_token": "TOKEN_0xB1C4",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.21
       },
       {
         "step": 18,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_15",
+        "expected_token": "TOKEN_0x2C2E",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.16
       },
       {
         "step": 19,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_16",
+        "expected_token": "TOKEN_0xA697",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
+        "latency_ms": 1.23
       },
       {
         "step": 20,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_17",
+        "expected_token": "TOKEN_0x2101",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 21,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 22,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 23,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 24,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 25,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 26,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 27,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 28,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 29,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 30,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 31,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 32,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 33,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 34,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 35,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 36,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 37,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 38,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 39,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 40,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 41,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 42,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 43,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 44,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 45,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 46,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 47,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 48,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
-      },
-      {
-        "step": 49,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 50,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.36
       }
     ],
-    "Unindexed Flat Store": [
+    "qwen2.5-coder:7b + Memory Index": [
       {
         "step": 1,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0005
+        "latency_ms": 1.24
       },
       {
         "step": 2,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0004
+        "latency_ms": 1.06
       },
       {
         "step": 3,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.25
       },
       {
         "step": 4,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_01",
+        "expected_token": "TOKEN_0x7A69",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0
+        "latency_ms": 1.24
       },
       {
         "step": 5,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_02",
+        "expected_token": "TOKEN_0xF4D2",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.22
       },
       {
         "step": 6,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_03",
+        "expected_token": "TOKEN_0x6F3C",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.26
       },
       {
         "step": 7,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_04",
+        "expected_token": "TOKEN_0xE9A5",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.35
       },
       {
         "step": 8,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_05",
+        "expected_token": "TOKEN_0x640F",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0003
+        "latency_ms": 1.43
       },
       {
         "step": 9,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_06",
+        "expected_token": "TOKEN_0xDE78",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
+        "latency_ms": 1.2
       },
       {
         "step": 10,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_07",
+        "expected_token": "TOKEN_0x58E2",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
+        "latency_ms": 1.27
       },
       {
         "step": 11,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_08",
+        "expected_token": "TOKEN_0xD34B",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.39
       },
       {
         "step": 12,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_09",
+        "expected_token": "TOKEN_0x4DB5",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.37
       },
       {
         "step": 13,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_10",
+        "expected_token": "TOKEN_0xC81E",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.34
       },
       {
         "step": 14,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_11",
+        "expected_token": "TOKEN_0x4288",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.16
       },
       {
         "step": 15,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_12",
+        "expected_token": "TOKEN_0xBCF1",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0
+        "latency_ms": 2.09
       },
       {
         "step": 16,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_13",
+        "expected_token": "TOKEN_0x375B",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.26
       },
       {
         "step": 17,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_14",
+        "expected_token": "TOKEN_0xB1C4",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.2
       },
       {
         "step": 18,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_15",
+        "expected_token": "TOKEN_0x2C2E",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.57
       },
       {
         "step": 19,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_16",
+        "expected_token": "TOKEN_0xA697",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.37
       },
       {
         "step": 20,
-        "accuracy_recall": 100.0,
+        "target_key": "ENV_VAR_KEY_17",
+        "expected_token": "TOKEN_0x2101",
+        "model_response": "ERROR: HTTP Error 404: Not Found",
+        "accuracy_recall": 0.0,
         "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 21,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 22,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 23,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 24,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 25,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 26,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 27,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0
-      },
-      {
-        "step": 28,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 29,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 30,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 31,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 32,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 33,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 34,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 35,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 36,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 37,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 38,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 39,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 40,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 41,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0002
-      },
-      {
-        "step": 42,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 43,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 44,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 45,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 46,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 47,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 48,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 49,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
-      },
-      {
-        "step": 50,
-        "accuracy_recall": 100.0,
-        "state_pollution_pct": 0.0,
-        "latency_ms": 0.0001
+        "latency_ms": 1.37
       }
     ]
   }
